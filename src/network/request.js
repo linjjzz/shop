@@ -12,7 +12,8 @@ export function request(config){
     //2.1.请求拦截
     instance.interceptors.request.use(config => {
       //请求成功
-
+      //为请求头对象，添加Token验证Authorization字段
+      config.headers.Authorization = window.sessionStorage.getItem('token')
       return config
     }, err =>{
       //请求失败

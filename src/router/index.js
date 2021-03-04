@@ -6,6 +6,9 @@ Vue.use(VueRouter)
 const Login = () => import('../views/Login')
 const Home = () => import('../views/Home')
 
+const Welcome = () => import('../components/Welcome')
+const Users = ()=> import('../components/user/Users')
+
 const routes = [
   {
     path:'/',
@@ -17,7 +20,18 @@ const routes = [
   },
   {
     path: '/home',
-    component: Home
+    component: Home,
+    redirect: '/welcome',
+    children: [
+      {
+        path: '/welcome',
+        component: Welcome
+      },
+      {
+        path: '/users',
+        component: Users
+      }
+    ]
   }
 ]
 

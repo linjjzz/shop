@@ -83,7 +83,7 @@ export default {
         //1.2token只应在当前网站打开期间生效，所以将token保存在sessionStorage中
         window.sessionStorage.setItem('token', res.data.token)
         //2.通过编程式导航跳转到后台主页路由地址式/home
-        this.$router.push('/home')
+        this.$router.replace('/home')
       })
     },
   },
