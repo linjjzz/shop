@@ -4,6 +4,7 @@ export function getLogindate(loginFrom) {
   return request({
     method:'post',
     url: '/login',
-    params: loginFrom
+    params: loginFrom,
+    data: loginFrom
   })
 }
