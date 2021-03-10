@@ -87,7 +87,7 @@ export default {
   },
   created() {
     // async () => {
-    //   const {data: res} = await getMenuList()
+    //   const {res} = await getMenuList()
     //   console.log(res)
     // }
     getMenuList().then((res) => {
